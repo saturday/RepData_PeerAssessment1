@@ -109,7 +109,6 @@ imputedDataTable$date <- as.POSIXct(strptime(imputedDataTable$date,format="%Y-%m
 for (i in 1:nrow(imputedDataTable)) {
         if (weekdays.POSIXt(imputedDataTable[i,]$date) == "Saturday" || weekdays.POSIXt(imputedDataTable[i,]$date) == "Sunday") {
                 imputedDataTable[i,4] <- "weekend"
-        aggregate(.~ID, data=df, mean)
 } else {
                 imputedDataTable[i,4] <- "weekday"
         }
