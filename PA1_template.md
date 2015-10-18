@@ -195,7 +195,7 @@ subsettedWeekend$dayType <- "weekend"
 
 combined <- rbind(subsettedWeekday, subsettedWeekend)
 
-densityplot(combined$interval~combined$mean|factor(combined$dayType))
+xyplot(combined$mean~combined$interval|factor(combined$dayType), type="l")
 ```
 
 ![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
